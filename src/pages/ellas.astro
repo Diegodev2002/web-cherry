@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cards from '../components/Cards.jsx';
+import { productos } from '../components/data/ellas.js';
+---
+
+<Layout title='Cherry Pop'>
+	<section class='Cherry_info'>
+		<div
+			class="flex bg-[url('/img/fondo_CherryPop_dama.jpg')] bg-center bg-cover w-screen h-screen object-cover text-center text-white text-2xl"
+		>
+			<div class='m-auto items-center py-auto'>
+				<p class='mb-4'>Cherry Pop</p>
+				<p>Tienda Online</p>
+				<p class='text-sm mt-20'>Descubre Tu Estilo Único.</p>
+			</div>
+		</div>
+	</section>
+	<section class='p-10 bg-[#F8F8F8]'>
+		<div class='content centered-titles text-center mt-10' data-aos='fade-up'>
+			<h1 class='text-3xl text-[#B92F22]'>Tendencias que Te Hacen Brillar</h1>
+			<h2 class='mt-12 text-xl'>
+				Encuentra las últimas tendencias y estilos en nuestra colección de ropa
+				para dama. Desde casual hasta elegante, tenemos lo que necesitas para
+				cada momento de tu vida.
+			</h2>
+		</div>
+		<div class='mt-10'>
+			<Cards products={productos} />
+		</div>
+	</section>
+</Layout>

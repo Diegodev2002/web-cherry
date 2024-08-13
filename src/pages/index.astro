@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title='Cherry pop'>
+	<main class='relative font-medium'>
+		<div
+			class="bg-[url('/img/fondo_CherryPop_index.jpg')] bg-center bg-cover w-screen h-screen object-cover text-center"
+		>
+			<h1 data-aos='fade-up' data-aos-delay='500' class='pt-56'>Cherry Pop</h1>
+			<h1 data-aos='fade-up' data-aos-delay='500'>Tienda Online</h1>
+
+			<h2 data-aos='fade-up' data-aos-delay='600' class=''>
+				Tu destino de moda favorito.
+			</h2>
+		</div>
+		<section class='bg-[#F8F8F8] text-center py-10'>
+			<h2 class='text-[#68021B] m-16'>Descubre un mundo lleno de Glamour</h2>
+	
+				<a href='/ellas' class=' drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex  m-auto gap-20 p-16'>
+					<img src='/img/dama.jpg' alt='' class="w-1/2" />
+					<p class="text-[#FEA4AF] my-auto w-1/2 text-4xl">Ellas</p>
+				</a>
+				<a href='/ellos' class=' drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex  m-auto gap-20 p-16'>
+					<p class="text-[#8BB8E8] my-auto w-1/2 text-4xl">Ellos</p>
+					<img src='/img/caballero.jpg' alt='' class="w-1/2" />
+				</a>
+				<a href='/' class=' drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex  m-auto gap-20 p-16'>
+					<img src='/img/accessorios.jpg' alt='' class="w-1/2" />
+					<p class="text-[#C8A2C8] my-auto w-1/2 text-4xl">Accesorios</p>
+				</a>
+				<a href='/' class=' drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex  m-auto gap-20 p-16'>
+					<p class="text-[#8BB8E8] my-auto w-1/2 text-4xl">Zapatos</p>
+					<img src='/img/zapatos.jpg' alt='' class="w-1/2" />
+				</a>
+		
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		font-family: 'Parisienne', cursive;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+	.shadow-nome {
+    text-shadow: 2px 2px 4px black;
+  }
+</style>
