@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='Cherry Pop'>
+  <section class="bg-[url('/img/bg-2')] flex items-center justify-center h-screen m-0">
+    <div class='bg-white p-8 rounded-lg shadow-lg w-80'>
+      <h1 class='text-2xl font-semibold mb-6'>Login</h1>
+      <form id='loginForm' class='space-y-4'>
+        <input
+          type='text'
+          id='username'
+          name='username'
+          placeholder='Usuario'
+          required
+          class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+        />
+        <input
+          type='password'
+          id='password'
+          name='password'
+          placeholder='Contraseña'
+          required
+          class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+        />
+        <button
+          type='submit'
+          class='w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600'
+        >
+          Iniciar sesión
+        </button>
+      </form>
+      <div class='mt-4 text-center'>
+        <p id='message' class='text-red-500'></p>
+        <a href='/registro.html' class='text-blue-500 hover:underline'>
+          ¿No tienes cuenta? Regístrate aquí
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const usernameInput = document.getElementById('username') as HTMLInputElement;
+        const passwordInput = document.getElementById('password') as HTMLInputElement;
+
+        if (usernameInput && passwordInput) {
+          const username = usernameInput.value;
+          const password = passwordInput.value;
+
+          try {
+            const response = await fetch('http://localhost:3000/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ username, password }),
+            });
+
+            const message = await response.text();
+            document.getElementById('message')!.textContent = message;
+
+            if (response.ok) {
+              // Redirigir a la página de contenido si el login es exitoso
+              window.location.href = '/content.html'; // Cambia esto a la URL de la página de contenido
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('message')!.textContent =
+              'Error en la conexión con el servidor';
+          }
+        } else {
+          console.error('Error: los campos de entrada no se encontraron.');
+        }
+      });
+    } else {
+      console.error('Error: el formulario de inicio de sesión no se encontró.');
+    }
+  });
+</script>
