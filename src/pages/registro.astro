@@ -3,206 +3,245 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Registro'>
-  <section class="bg-[url('/img/bg-1.jpg')] bg-cover flex items-center justify-center h-screen m-0">
-    <div class='bg-white p-8 rounded-lg shadow-lg w-96'>
-      <h1 class='text-3xl font-semibold mb-6 text-center'>Registro</h1>
-      <form id='registerForm' class='space-y-4'>
-        <div class='space-y-2'>
-          <label for='firstName' class='block text-gray-700'>Nombre</label>
-          <input
-            type='text'
-            id='firstName'
-            name='firstName'
-            placeholder='Nombre'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+	<section
+		class="bg-[url('/img/bg-1.jpg')] bg-cover flex items-center justify-center py-32"
+	>
+		<div class='bg-white p-8 rounded-lg shadow-lg w-[550px]'>
+			<h1 class='text-3xl font-semibold mb-6 text-center'>Registro</h1>
+			<form id='registerForm' class='space-y-4'>
+				<div class='space-y-2'>
+					<label for='firstName' class='block text-gray-700'>Nombre</label>
+					<input
+						type='text'
+						id='firstName'
+						name='firstName'
+						placeholder='Nombre'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='lastName' class='block text-gray-700'>Apellido</label>
-          <input
-            type='text'
-            id='lastName'
-            name='lastName'
-            placeholder='Apellido'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='lastName' class='block text-gray-700'>Apellido</label>
+					<input
+						type='text'
+						id='lastName'
+						name='lastName'
+						placeholder='Apellido'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='email' class='block text-gray-700'>Correo electrónico</label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            placeholder='Correo electrónico'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='email' class='block text-gray-700'
+						>Correo electrónico</label
+					>
+					<input
+						type='email'
+						id='email'
+						name='email'
+						placeholder='Correo electrónico'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='password' class='block text-gray-700'>Contraseña</label>
-          <input
-            type='password'
-            id='password'
-            name='password'
-            placeholder='Contraseña'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='password' class='block text-gray-700'>Contraseña</label>
+					<input
+						type='password'
+						id='password'
+						name='password'
+						placeholder='Contraseña'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='address1' class='block text-gray-700'>Dirección 1</label>
-          <input
-            type='text'
-            id='address1'
-            name='address1'
-            placeholder='Dirección 1'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='address1' class='block text-gray-700'>Dirección 1</label>
+					<input
+						type='text'
+						id='address1'
+						name='address1'
+						placeholder='Dirección 1'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='address2' class='block text-gray-700'>Dirección 2</label>
-          <input
-            type='text'
-            id='address2'
-            name='address2'
-            placeholder='Dirección 2'
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='address2' class='block text-gray-700'>Dirección 2</label>
+					<input
+						type='text'
+						id='address2'
+						name='address2'
+						placeholder='Dirección 2'
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='address3' class='block text-gray-700'>Dirección 3</label>
-          <input
-            type='text'
-            id='address3'
-            name='address3'
-            placeholder='Dirección 3'
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='address3' class='block text-gray-700'>Dirección 3</label>
+					<input
+						type='text'
+						id='address3'
+						name='address3'
+						placeholder='Dirección 3'
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='cardNumber1' class='block text-gray-700'>Número de tarjeta 1</label>
-          <input
-            type='text'
-            id='cardNumber1'
-            name='cardNumber1'
-            placeholder='Número de tarjeta 1'
-            required
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='cardNumber1' class='block text-gray-700'
+						>Número de tarjeta 1</label
+					>
+					<input
+						type='text'
+						id='cardNumber1'
+						name='cardNumber1'
+						placeholder='Número de tarjeta 1'
+						required
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='cardNumber2' class='block text-gray-700'>Número de tarjeta 2</label>
-          <input
-            type='text'
-            id='cardNumber2'
-            name='cardNumber2'
-            placeholder='Número de tarjeta 2'
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='cardNumber2' class='block text-gray-700'
+						>Número de tarjeta 2</label
+					>
+					<input
+						type='text'
+						id='cardNumber2'
+						name='cardNumber2'
+						placeholder='Número de tarjeta 2'
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <div class='space-y-2'>
-          <label for='cardNumber3' class='block text-gray-700'>Número de tarjeta 3</label>
-          <input
-            type='text'
-            id='cardNumber3'
-            name='cardNumber3'
-            placeholder='Número de tarjeta 3'
-            class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-          />
-        </div>
+				<div class='space-y-2'>
+					<label for='cardNumber3' class='block text-gray-700'
+						>Número de tarjeta 3</label
+					>
+					<input
+						type='text'
+						id='cardNumber3'
+						name='cardNumber3'
+						placeholder='Número de tarjeta 3'
+						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+					/>
+				</div>
 
-        <button
-          type='submit'
-          class='w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600'
-        >
-          Registrarse
-        </button>
-      </form>
-      <div class='mt-4 text-center'>
-        <a href='/login.html' class='text-blue-500 hover:underline'>
-          ¿Ya tienes una cuenta? Inicia sesión aquí
-        </a>
-      </div>
-      <p id='message' class='mt-4 text-center text-red-500'></p>
-    </div>
-  </section>
+				<button
+					type='submit'
+					class='w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600'
+				>
+					Registrarse
+				</button>
+			</form>
+			<div class='mt-4 text-center'>
+				<a href='/login.html' class='text-blue-500 hover:underline'>
+					¿Ya tienes una cuenta? Inicia sesión aquí
+				</a>
+			</div>
+			<p id='message' class='mt-4 text-center text-red-500'></p>
+		</div>
+	</section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const registerForm = document.getElementById('registerForm');
-      if (registerForm) {
-        registerForm.addEventListener('submit', async (event) => {
-          event.preventDefault();
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const registerForm = document.getElementById('registerForm');
+			if (registerForm) {
+				registerForm.addEventListener('submit', async (event) => {
+					event.preventDefault();
 
-          const firstNameInput = document.getElementById('firstName') as HTMLInputElement;
-          const lastNameInput = document.getElementById('lastName') as HTMLInputElement;
-          const emailInput = document.getElementById('email') as HTMLInputElement;
-          const passwordInput = document.getElementById('password') as HTMLInputElement;
-          const address1Input = document.getElementById('address1') as HTMLInputElement;
-          const address2Input = document.getElementById('address2') as HTMLInputElement;
-          const address3Input = document.getElementById('address3') as HTMLInputElement;
-          const cardNumber1Input = document.getElementById('cardNumber1') as HTMLInputElement;
-          const cardNumber2Input = document.getElementById('cardNumber2') as HTMLInputElement;
-          const cardNumber3Input = document.getElementById('cardNumber3') as HTMLInputElement;
+					const firstNameInput = document.getElementById(
+						'firstName'
+					) as HTMLInputElement;
+					const lastNameInput = document.getElementById(
+						'lastName'
+					) as HTMLInputElement;
+					const emailInput = document.getElementById(
+						'email'
+					) as HTMLInputElement;
+					const passwordInput = document.getElementById(
+						'password'
+					) as HTMLInputElement;
+					const address1Input = document.getElementById(
+						'address1'
+					) as HTMLInputElement;
+					const address2Input = document.getElementById(
+						'address2'
+					) as HTMLInputElement;
+					const address3Input = document.getElementById(
+						'address3'
+					) as HTMLInputElement;
+					const cardNumber1Input = document.getElementById(
+						'cardNumber1'
+					) as HTMLInputElement;
+					const cardNumber2Input = document.getElementById(
+						'cardNumber2'
+					) as HTMLInputElement;
+					const cardNumber3Input = document.getElementById(
+						'cardNumber3'
+					) as HTMLInputElement;
 
-          if (firstNameInput && lastNameInput && emailInput && passwordInput && address1Input && cardNumber1Input) {
-            const firstName = firstNameInput.value;
-            const lastName = lastNameInput.value;
-            const email = emailInput.value;
-            const password = passwordInput.value;
-            const address1 = address1Input.value;
-            const address2 = address2Input.value;
-            const address3 = address3Input.value;
-            const cardNumber1 = cardNumber1Input.value;
-            const cardNumber2 = cardNumber2Input.value;
-            const cardNumber3 = cardNumber3Input.value;
+					if (
+						firstNameInput &&
+						lastNameInput &&
+						emailInput &&
+						passwordInput &&
+						address1Input &&
+						cardNumber1Input
+					) {
+						const firstName = firstNameInput.value;
+						const lastName = lastNameInput.value;
+						const email = emailInput.value;
+						const password = passwordInput.value;
+						const address1 = address1Input.value;
+						const address2 = address2Input.value;
+						const address3 = address3Input.value;
+						const cardNumber1 = cardNumber1Input.value;
+						const cardNumber2 = cardNumber2Input.value;
+						const cardNumber3 = cardNumber3Input.value;
 
-            try {
-              const response = await fetch('http://localhost:3000/register', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  firstName,
-                  lastName,
-                  email,
-                  password,
-                  address1,
-                  address2,
-                  address3,
-                  cardNumber1,
-                  cardNumber2,
-                  cardNumber3,
-                }),
-              });
+						try {
+							const response = await fetch('http://localhost:3000/register', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json',
+								},
+								body: JSON.stringify({
+									firstName,
+									lastName,
+									email,
+									password,
+									address1,
+									address2,
+									address3,
+									cardNumber1,
+									cardNumber2,
+									cardNumber3,
+								}),
+							});
 
-              const message = await response.text();
-              document.getElementById('message')!.textContent = message;
-            } catch (error) {
-              console.error('Error:', error);
-              document.getElementById('message')!.textContent =
-                'Error en la conexión con el servidor';
-            }
-          } else {
-            console.error('Error: algunos campos de entrada no se encontraron.');
-          }
-        });
-      } else {
-        console.error('Error: el formulario de registro no se encontró.');
-      }
-    });
-  </script>
-
+							const message = await response.text();
+							document.getElementById('message')!.textContent = message;
+						} catch (error) {
+							console.error('Error:', error);
+							document.getElementById('message')!.textContent =
+								'Error en la conexión con el servidor';
+						}
+					} else {
+						console.error(
+							'Error: algunos campos de entrada no se encontraron.'
+						);
+					}
+				});
+			} else {
+				console.error('Error: el formulario de registro no se encontró.');
+			}
+		});
+	</script>
+</Layout>
