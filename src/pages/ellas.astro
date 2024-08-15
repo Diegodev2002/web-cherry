@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards.jsx';
 import { productos } from '../components/data/ellas.js';
+import Menu from '../components/Menu.astro';
 ---
 
 <Layout title='Cherry Pop'>
+	<Menu />
 	<section class='Cherry_info'>
 		<div
 			class="flex bg-[url('/img/fondo_CherryPop_dama.jpg')] bg-center bg-cover w-screen h-screen object-cover text-center text-white text-2xl"
@@ -27,6 +29,9 @@ import { productos } from '../components/data/ellas.js';
 		</div>
 		<div class='mt-10'>
 			<Cards products={productos} />
+		</div>
+		<div class="w-full justify-center my-10 flex">
+			
 		</div>
 	</section>
 </Layout>

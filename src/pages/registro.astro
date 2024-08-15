@@ -4,11 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='Registro'>
 	<section
-		class="bg-[url('/img/bg-1.jpg')] bg-cover flex items-center justify-center py-32"
+		class="bg-[url('/img/bg-1.jpg')] bg-cover flex items-center justify-center py-10"
 	>
 		<div class='bg-white p-8 rounded-lg shadow-lg w-[550px]'>
 			<h1 class='text-3xl font-semibold mb-6 text-center'>Registro</h1>
 			<form id='registerForm' class='space-y-4'>
+				<!-- Campos del formulario -->
 				<div class='space-y-2'>
 					<label for='firstName' class='block text-gray-700'>Nombre</label>
 					<input
@@ -34,13 +35,13 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 
 				<div class='space-y-2'>
-					<label for='email' class='block text-gray-700'
+					<label for='usuario' class='block text-gray-700'
 						>Correo electrónico</label
 					>
 					<input
 						type='email'
-						id='email'
-						name='email'
+						id='usuario'
+						name='usuario'
 						placeholder='Correo electrónico'
 						required
 						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -51,8 +52,8 @@ import Layout from '../layouts/Layout.astro';
 					<label for='password' class='block text-gray-700'>Contraseña</label>
 					<input
 						type='password'
-						id='password'
-						name='password'
+						id='contrasena'
+						name='contrasena'
 						placeholder='Contraseña'
 						required
 						class='w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -162,11 +163,11 @@ import Layout from '../layouts/Layout.astro';
 					const lastNameInput = document.getElementById(
 						'lastName'
 					) as HTMLInputElement;
-					const emailInput = document.getElementById(
-						'email'
+					const usuarioInput = document.getElementById(
+						'usuario'
 					) as HTMLInputElement;
-					const passwordInput = document.getElementById(
-						'password'
+					const contrasenaInput = document.getElementById(
+						'contrasena'
 					) as HTMLInputElement;
 					const address1Input = document.getElementById(
 						'address1'
@@ -190,15 +191,15 @@ import Layout from '../layouts/Layout.astro';
 					if (
 						firstNameInput &&
 						lastNameInput &&
-						emailInput &&
-						passwordInput &&
+						usuarioInput &&
+						contrasenaInput &&
 						address1Input &&
 						cardNumber1Input
 					) {
 						const firstName = firstNameInput.value;
 						const lastName = lastNameInput.value;
-						const email = emailInput.value;
-						const password = passwordInput.value;
+						const usuario = usuarioInput.value;
+						const contrasena = contrasenaInput.value;
 						const address1 = address1Input.value;
 						const address2 = address2Input.value;
 						const address3 = address3Input.value;
@@ -215,8 +216,8 @@ import Layout from '../layouts/Layout.astro';
 								body: JSON.stringify({
 									firstName,
 									lastName,
-									email,
-									password,
+									usuario,
+									contrasena,
 									address1,
 									address2,
 									address3,
@@ -228,6 +229,11 @@ import Layout from '../layouts/Layout.astro';
 
 							const message = await response.text();
 							document.getElementById('message')!.textContent = message;
+
+							if (response.ok) {
+								// Redirige al índice si la respuesta es exitosa
+								window.location.href = '/';
+							}
 						} catch (error) {
 							console.error('Error:', error);
 							document.getElementById('message')!.textContent =
